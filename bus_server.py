@@ -155,7 +155,7 @@ class Bus_Server:
 	self.cmd_vel_pub_ = rospy.Publisher("cmd_vel", Twist, queue_size=5)
 
 	# Create single sonar topic
-	self.sonar_pub_ = rospy.Publisher("sonar", Range, queue_size=5)
+	self.sonar_pub_ = rospy.Publisher("sonars", Range, queue_size=5)
 
 	# Subscribe to *cmd_vel* topic:
 	self.cmd_vel_enabled_ = True

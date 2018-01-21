@@ -51,7 +51,7 @@ class Sonar_Statistics:
 	rospy.on_shutdown(self.shut_down)
 
 	# ...
-	rospy.Subscriber("/sonar", Range, self.range_callback)
+	rospy.Subscriber("/sonars", Range, self.range_callback)
 
 	for index in range(16):
 	    counts.append(0)
