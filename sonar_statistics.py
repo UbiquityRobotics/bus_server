@@ -51,9 +51,9 @@ class Sonar_Statistics:
 	rospy.on_shutdown(self.shut_down)
 
 	# ...
+	rospy.Subscriber("/sonars", Range, self.range_callback)
+
 	for index in range(16):
-	    rospy.Subscriber("/arduino/sensor/sonar_{0}".format(index),
-	      Range, self.range_callback)
 	    counts.append(0)
 
     def range_callback(self, request):
