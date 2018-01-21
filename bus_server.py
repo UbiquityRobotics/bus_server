@@ -206,11 +206,11 @@ class Bus_Server:
 
 		# We have sonar, so grab the additional fields and create
 		# the *Sonar* object:
-		sensor = Sonar_Sensor(name,
+		sensor = Sonar_Sensor(name, self.sonar_pub_,
 		  Sensor.SONAR_TYPE, sensor_id, frame_id,
 		  field_of_view = field_of_view,
 		  min_range = min_range,
-		  max_range = max_range, self.sonar_pub_)
+		  max_range = max_range)
 
 		sonar_class = -1
 		if class_name.lower() == "off":
@@ -747,8 +747,8 @@ class Encoder_Sensor(Sensor):
 	    dead_reckon.right_encoder_set(value, time)
 
 class Sonar_Sensor(Sensor):
-    def __init__(self, name, sensor_type, sensor_id, frame_id,
-      field_of_view, min_range, max_range, publisher):
+    def __init__(self, name, publisher, sensor_type, sensor_id, frame_id,
+      field_of_view, min_range, max_range):
 	""" *Sonar_Sensor*: Initialize a *Sonar_Sensor* to contain *name*,
 	    *sensor_id*, *frame_id*, *field_of_view*, *min_range*, *max_range*.
 	"""
