@@ -2,8 +2,8 @@
 Changelog for package bus_server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.2.2 (2018-02-04)
+------------------
 * Publish all sonars on a single topic /sonars, in addition to individual topics
 * Contributors: Jim Vaughan
 
